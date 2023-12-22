@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { UserButton, auth } from "@clerk/nextjs";
 import Link from "next/link";
 import { LogIn } from "lucide-react";
+import FileUpload from "@/components/FileUpload";
 
 export default async function Home() {
   const { userId } = await auth();
@@ -10,7 +11,7 @@ export default async function Home() {
   return (
     <div className=" w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100">
       <div className="center">
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col gap-8 md:gap-4 lg:gap-2 items-center text-center">
           <div className="flex items-center">
             <h1 className="mr-3 text-5xl font-semibold">Chat with any PDF</h1>
             <UserButton afterSignOutUrl="/" />
@@ -24,7 +25,7 @@ export default async function Home() {
           </p>
           <div className="w-full mt-">
             {isAuth ? (
-              <h1>fileupload</h1>
+              <FileUpload />
             ) : (
               <Link href="/sign-in">
                 <Button>
