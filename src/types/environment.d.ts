@@ -19,6 +19,9 @@ declare global {
       NEXT_PUBLIC_FIREBASE_APP_ID: string;
       NEXT_PUBLIC_FIREBASE_MESSAGING_ID: string;
       NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: string;
+
+      NEXT_PUBLIC_PINECONEDB_KEY: string;
+      NEXT_PUBLIC_PINECONEDB_ENVIRONMENT: string;
     }
   }
 }

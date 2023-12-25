@@ -10,7 +10,7 @@ import app from "../../../firebase.config";
 export async function uploadPdf(file: File) {
   const storage = getStorage(app);
   const fileId = uuidv4();
-  const filePath = `files/${fileId}/${file.name}`;
+  const filePath = `uploads/${fileId}/${file.name}`;
   const newImageRef = ref(storage, filePath);
 
   await uploadBytesResumable(newImageRef, file);
